@@ -1,17 +1,145 @@
-/* Basic CSS Styling Sheet */
-
 body {
-font-family: Arial, sans-serif; /* Demonstrates font-family /
-font-size: 16px;                / Demonstrates font-size /
-color: #333333;                 / Demonstrates color /
-background-color: #f0f4f8;      / Demonstrates background-color /
-margin: 20px;                   / Demonstrates margin */
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.box-placeholder {
-width: 300px;                   /* Demonstrates width /
-height: 150px;                  / Demonstrates height /
-background-color: #ffffff;      / Demonstrates background-color /
-color: #2c3e50;                 / Demonstrates color */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
+.container {
+    width: min(900px, 100%);
+    padding: 32px;
+    border-radius: 12px;
+    background: rgba(128, 128, 128, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-manager {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.theme-manager h1,
+.theme-manager p {
+    margin-top: 0;
+}
+
+button {
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: minmax(180px, 240px) 1fr;
+    align-items: center;
+    gap: 32px;
+    padding-top: 28px;
+}
+
+.portrait {
+    margin: 0;
+    text-align: center;
+}
+
+.portrait img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portrait figcaption {
+    margin-top: 10px;
+    font-size: 0.875rem;
+    opacity: 0.75;
+}
+
+.about-copy h2 {
+    margin-top: 0;
+}
+
+.about-copy p {
+    line-height: 1.7;
+}
+
+.learning-section {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.learning-section > p,
+.learning-list p {
+    line-height: 1.7;
+}
+
+.learning-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.learning-list li {
+    padding: 18px;
+    border-radius: 8px;
+    background: rgba(128, 128, 128, 0.12);
+}
+
+.learning-list h3 {
+    margin-top: 0;
+}
+
+.learning-list p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 24px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .portrait {
+        width: min(220px, 100%);
+        justify-self: center;
+    }
+
+    .learning-list {
+        grid-template-columns: 1fr;
+    }
+}
