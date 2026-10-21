@@ -7,6 +7,11 @@
     <title>Portfolio | About Me</title>
 </head>
 <body>
+    <div class="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+    </div>
+    <button id="back-to-top-btn" class="back-to-top-btn" type="button" aria-label="Back to top" hidden>↑</button>
+
     <main class="container">
         <section class="theme-manager" aria-label="Theme controls">
             <h1>Grayson's Portfolio</h1>
@@ -28,6 +33,7 @@
                 </p>
                 
                     <p><a href="https://www.linkedin.com/in/grayson-brush-a6aa9b442/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></p>
+                    <p><a href="https://github.com/Brush-Grayson" target="_blank" rel="noopener noreferrer">View my GitHub profile</a></p>
             </div>
         </section>
 
@@ -48,6 +54,26 @@
                         <p>Responding to user actions and updating page content, like the light and dark mode toggle.</p>
                     </li>
             </ul>
+        </section>
+
+        <section class="game-section" aria-labelledby="game-heading">
+            <h2 id="game-heading">Tic-Tac-Toe</h2>
+            <p>The first basic game I built to learn JavaScript and DOM manipulation.</p>
+            <div class="game-controls">
+                    <p id="game-status" role="status" aria-live="polite">X's turn.</p>
+                    <button id="reset-game-btn" type="button">New Game</button>
+            </div>
+            <div class="tic-tac-toe-board" role="group" aria-label="Tic-Tac-Toe board">
+                    <button class="tic-tac-toe-cell" type="button" data-index="0" aria-label="Cell 1, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="1" aria-label="Cell 2, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="2" aria-label="Cell 3, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="3" aria-label="Cell 4, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="4" aria-label="Cell 5, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="5" aria-label="Cell 6, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="6" aria-label="Cell 7, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="7" aria-label="Cell 8, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="8" aria-label="Cell 9, empty"></button>
+            </div>
         </section>
     </main>
 

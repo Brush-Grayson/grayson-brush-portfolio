@@ -9,7 +9,7 @@
 ---
 
 <h2> List of major website pages and sections </h2>
-<p> - Dark/light mode <br> - About me <br> - Linkedin Profile </p>
+<p> - Dark/light mode <br> - About me <br> - Linkedin Profile <br> - Github Profile <br> - Tic-Tac-Toe <br> - What I have learned so Far</p>
 
 ---
 <h2>Ai Usage</h2>
