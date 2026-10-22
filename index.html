@@ -3,32 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML Template</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio | About Me</title>
 </head>
 <body>
-
-    <!-- Heading -->
-    <h1>Welcome to My Website</h1>
-
-    <!-- Paragraph with a line break -->
-    <p>This is a sample paragraph explaining the content of the page.<br>
-    Here is text on a new line after the line break.</p>
-
-    <!-- Div container holding interactive elements -->
-    <div>
-        <!-- Input field -->
-        <label for="username">Enter your name:</label>
-        <input type="text" id="username" placeholder="Type here...">
-
-        <!-- Button -->
-        <button type="button">Submit</button>
+    <div class="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
     </div>
+    <button id="back-to-top-btn" class="back-to-top-btn" type="button" aria-label="Back to top" hidden>↑</button>
 
-    <!-- Link -->
-    <p>Visit <a href="https://www.example.com" target="_blank">Example Website</a> for more information.</p>
+    <main class="container">
+        <section class="theme-manager" aria-label="Theme controls">
+            <h1>Grayson's Portfolio</h1>
+            <p id="status-text">The current theme is Light Mode.</p>
+            <button id="theme-btn" type="button">Toggle Mode</button>
+        </section>
 
-    <!-- Image with src and alt -->
-    <img src="https://via.placeholder.com/300x150" alt="Placeholder preview image showing dimensions">
+        <section class="about-section" aria-labelledby="about-heading">
+            <figure class="portrait">
+                <img src="images/linkedin.jfif" alt="Grayson Brush">
+                <figcaption>Grayson Brush</figcaption>
+            </figure>
+            <div class="about-copy">
+                <h2 id="about-heading">About Me</h2>
+                <p>Hi, I'm Grayson. I'm a software development with applied AI student who enjoys creating applications, solving problems, and learning new technologies.
+                    <br>
+                    <br>
+                    I have supervisory experience running the shipping and receiving departments of a school supplies company School Specialty. I currenly work at Emplify Health as a Sterilization Technician and want to move into AI software development.
+                </p>
+                
+                    <p><a href="https://www.linkedin.com/in/grayson-brush-a6aa9b442/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></p>
+                    <p><a href="https://github.com/Brush-Grayson" target="_blank" rel="noopener noreferrer">View my GitHub profile</a></p>
+            </div>
+        </section>
 
+        <section class="learning-section" aria-labelledby="learning-heading">
+            <h2 id="learning-heading">What I've Learned So Far</h2>
+            <p>As I study software development and applied AI, I'm building practical skills and applying them to projects like this portfolio.</p>
+            <ul class="learning-list">
+                    <li>
+                        <h3>HTML</h3>
+                        <p>Structuring pages with semantic elements, headings, links, and images.</p>
+                    </li>
+                    <li>
+                        <h3>CSS</h3>
+                        <p>Styling page layouts and making them adapt to different screen sizes.</p>
+                    </li>
+                    <li>
+                        <h3>JavaScript</h3>
+                        <p>Responding to user actions and updating page content, like the light and dark mode toggle.</p>
+                    </li>
+            </ul>
+        </section>
+
+        <section class="game-section" aria-labelledby="game-heading">
+            <h2 id="game-heading">Tic-Tac-Toe</h2>
+            <p>The first basic game I built to learn JavaScript and DOM manipulation.</p>
+            <div class="game-controls">
+                    <p id="game-status" role="status" aria-live="polite">X's turn.</p>
+                    <button id="reset-game-btn" type="button">New Game</button>
+            </div>
+            <div class="tic-tac-toe-board" role="group" aria-label="Tic-Tac-Toe board">
+                    <button class="tic-tac-toe-cell" type="button" data-index="0" aria-label="Cell 1, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="1" aria-label="Cell 2, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="2" aria-label="Cell 3, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="3" aria-label="Cell 4, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="4" aria-label="Cell 5, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="5" aria-label="Cell 6, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="6" aria-label="Cell 7, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="7" aria-label="Cell 8, empty"></button>
+                    <button class="tic-tac-toe-cell" type="button" data-index="8" aria-label="Cell 9, empty"></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
